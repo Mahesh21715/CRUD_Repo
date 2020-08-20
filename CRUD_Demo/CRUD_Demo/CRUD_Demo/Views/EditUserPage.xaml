@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRUD_Demo.Views.EditUserPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="UserListView" ItemSelected="UserListView_ItemSelected">
+            </ListView>
+
+            <Entry x:Name="Id" Placeholder="User ID" Text="{Binding Id}" Keyboard="Text"/>
+            <Entry x:Name="UserName"  Placeholder="User Name" Text="{Binding Name}" Keyboard="Text"/>
+            <Entry x:Name="UserAddress" Placeholder="User Address" Text="{Binding Address}" Keyboard="Text"/>
+            <Button x:Name="UpdateUser" Text ="Update User " Clicked="UpdateUser_Clicked"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

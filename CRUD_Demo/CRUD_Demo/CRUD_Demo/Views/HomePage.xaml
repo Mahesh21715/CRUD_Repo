@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRUD_Demo.Views.HomePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Add User" Clicked="AddUser"/>
+
+            <Button Text="Get User Data" Clicked="GetUser"/>
+
+            <Button Text="Edit User Data" Clicked="EditUser"/>
+
+            <Button Text="Delete User Data" Clicked="DeleteUser" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
