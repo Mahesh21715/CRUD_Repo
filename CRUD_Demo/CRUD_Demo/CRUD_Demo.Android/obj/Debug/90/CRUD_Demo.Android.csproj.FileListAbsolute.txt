@@ -467,3 +467,4 @@ D:\OFFICE_WORK\CRUD_Demo\CRUD_Repo\CRUD_Demo\CRUD_Demo\CRUD_Demo.Android\obj\Deb
 D:\OFFICE_WORK\CRUD_Demo\CRUD_Repo\CRUD_Demo\CRUD_Demo\CRUD_Demo.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 D:\OFFICE_WORK\CRUD_Demo\CRUD_Repo\CRUD_Demo\CRUD_Demo\CRUD_Demo.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 D:\OFFICE_WORK\CRUD_Demo\CRUD_Repo\CRUD_Demo\CRUD_Demo\CRUD_Demo.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+D:\OFFICE_WORK\CRUD_Demo\CRUD_Repo\CRUD_Demo\CRUD_Demo\CRUD_Demo.Android\obj\Debug\90\android\src\crc6477475a6e66853367\MyEntryRenderer.java

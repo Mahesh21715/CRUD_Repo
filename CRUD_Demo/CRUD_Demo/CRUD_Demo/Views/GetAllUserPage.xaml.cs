@@ -1,4 +1,5 @@
 ﻿using CRUD_Demo.Models;
+using CRUD_Demo.ViewModels;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -15,13 +16,15 @@ namespace CRUD_Demo.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GetAllUserPage : ContentPage
     {
-        string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "myDB.db3");
+        //string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "myDB.db3");
         public GetAllUserPage()
         {
             InitializeComponent();
-           // BindingContext = new GetAllUserPage();
-            var db = new SQLiteConnection(dbPath);
-            UsersListView.ItemsSource = db.Table<User>().OrderBy(x => x.Name).ToList();
+            BindingContext = new GetUserViewModel();
+
+            //BindingContext = new GetAllUserPage();
+            //var db = new SQLiteConnection(dbPath);
+            //UsersListView.ItemsSource = db.Table<User>().OrderBy(x => x.Name).ToList();
         }
     }
 }

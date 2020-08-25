@@ -1,12 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CRUD_Demo.Views.DeleteUserPage">
+             x:Class="CRUD_Demo.Views.DeleteUserPage"
+             Title="Delete  User">
     <ContentPage.Content>
-        <StackLayout>
-            <ListView x:Name="UserListView" ItemSelected="UserListView_ItemSelected">
+        <StackLayout Margin="5">
+            <ListView 
+                x:Name="UserListView" 
+                ItemSelected="UserListView_ItemSelected">
             </ListView>
-            <Button x:Name="DeleteUser" Text ="Delete User " Clicked="DeleteUser_Clicked"/>
+            
+            <Button 
+                x:Name="DeleteUser" 
+                Text ="Delete User "
+                TextColor="GhostWhite"
+                Clicked="DeleteUser_Clicked" 
+                BackgroundColor="Red"
+                CornerRadius="10"/>
+            <!--<Button Text="Delete" Command="{Binding Path=BindingContext.DeleteCommand, Source={x:Reference UserListView}}" CommandParameter="{Binding .}"/>-->
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

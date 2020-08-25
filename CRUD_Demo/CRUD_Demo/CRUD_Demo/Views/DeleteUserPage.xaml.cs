@@ -1,4 +1,5 @@
 ﻿using CRUD_Demo.Models;
+using CRUD_Demo.ViewModels;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -20,8 +21,10 @@ namespace CRUD_Demo.Views
 
         public DeleteUserPage()
         {
-            InitializeComponent();
             var db = new SQLiteConnection(dbPath);
+            InitializeComponent();
+            //BindingContext = new DeleteUserViewModel();
+            
             UserListView.ItemsSource = db.Table<User>().OrderBy(x => x.Name).ToList();
         }
 
@@ -30,7 +33,7 @@ namespace CRUD_Demo.Views
             var db = new SQLiteConnection(dbPath);
             db.Table<User>().Delete(x => x.Id == user.Id);
             await DisplayAlert(null, user.Name + " Deleted", "Ok");
-            await Navigation.PopAsync();  
+            await Navigation.PopAsync();
         }
 
         private void UserListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)

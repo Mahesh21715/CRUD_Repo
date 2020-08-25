@@ -3,15 +3,53 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CRUD_Demo.Views.EditUserPage">
     <ContentPage.Content>
-        <StackLayout>
-            <ListView x:Name="UserListView" ItemSelected="UserListView_ItemSelected">
-            </ListView>
+        <!--<ScrollView x:Name="MainScroll" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">-->
 
-            <Entry x:Name="Id" Placeholder="User ID" Text="{Binding Id}" Keyboard="Text"/>
-            <Entry x:Name="UserName"  Placeholder="User Name" Text="{Binding Name}" Keyboard="Text"/>
-            <Entry x:Name="UserAddress" Placeholder="User Address" Text="{Binding Address}" Keyboard="Text"/>
-            <Button x:Name="UpdateUser" Text ="Update User " Clicked="UpdateUser_Clicked"/>
-            
-        </StackLayout>
+            <StackLayout>
+                <!--<ListView ItemsSource="MyUserList" ItemSelected="UserListView_ItemSelected">
+            </ListView>-->
+                <StackLayout Margin="4">
+                <Label Text="Select The User To Update" TextColor="SkyBlue" HorizontalOptions="Center"/>
+                <ListView 
+                        ItemsSource="{Binding MyUserList}"  
+                        BackgroundColor="LightBlue"
+                        ItemTapped="ListView_ItemTapped"
+                        >
+                    </ListView>
+                </StackLayout>
+
+                <StackLayout Margin="5">
+                    <Entry 
+                        x:Name="Id" 
+                        Placeholder="User ID" 
+                        Text="{Binding Id}" FontSize="Small" 
+                        TextColor="GhostWhite" 
+                        Keyboard="Text" />
+                    
+                    <Entry 
+                        x:Name="UserName"  
+                        Placeholder="User Name" 
+                        Text="{Binding Name}" 
+                        FontSize="Small" 
+                        TextColor="GhostWhite" 
+                        Keyboard="Text"/>
+                    
+                    <Entry 
+                        x:Name="UserAddress" 
+                        Placeholder="User Address" 
+                        Text="{Binding Address}" 
+                        FontSize="Small" 
+                        TextColor="GhostWhite" 
+                        Keyboard="Text"/>
+                    <!--<Button x:Name="UpdateUser" Text ="Update User " Clicked="UpdateUser_Clicked"/>-->
+                   
+                    <Button 
+                        BackgroundColor="Orange" 
+                        Text ="Update User"  
+                        Command="{Binding EditCommand}" 
+                        CornerRadius="10"/>
+                </StackLayout>
+            </StackLayout>
+        <!--</ScrollView>-->
     </ContentPage.Content>
 </ContentPage>

@@ -4,10 +4,10 @@
              x:Class="CRUD_Demo.Views.GetAllUserPage">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="UsersListView"
+            <!--<ListView 
                 Margin="5"
-               RowHeight="100">
-
+                RowHeight="100"
+                ItemsSource="{Binding Users}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -21,6 +21,10 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
 
+            </ListView>-->
+
+
+            <ListView ItemsSource="{Binding MyUserList}">
             </ListView>
         </StackLayout>
     </ContentPage.Content>

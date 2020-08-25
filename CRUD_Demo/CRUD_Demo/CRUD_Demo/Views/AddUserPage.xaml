@@ -2,15 +2,114 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CRUD_Demo.Views.AddUserPage"
+             xmlns:local="clr-namespace:CRUD_Demo"
              Title="Add User">
     <ContentPage.Content>
-        <StackLayout>
-            <Entry  Placeholder="User ID" Text="{Binding Id}" Keyboard="Text" />
-            <Entry  Placeholder="User Name" Text="{Binding Name}" Keyboard="Text"/>
-            <Entry  Placeholder="User Address" Text="{Binding Address}" Keyboard="Text"/>
-            <!--<Button Text="Add User" Clicked="SaveUser"/>-->
+        <!--<StackLayout>
+            <local:MyEntry  Placeholder="User ID" Text="{Binding Id}" Keyboard="Text" />
+            <local:MyEntry   Placeholder="User Name" Text="{Binding Name}" Keyboard="Text"/>
+            <local:MyEntry   Placeholder="User Address" Text="{Binding Address}" Keyboard="Text"/>
+            --><!--<Button Text="Add User" Clicked="SaveUser"/>--><!--
 
-            <Button Text="Add User" Command="{Binding AddCommand}" />
-        </StackLayout>
+            <Button Text="Add User" Command="{Binding AddCommand}" BackgroundColor="#00FF00" />
+        </StackLayout>-->
+
+        <Grid Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+
+                <RowDefinition  />
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+
+            <Label  
+                    Grid.Row="2"
+                    Grid.ColumnSpan="3"
+                    Text="User"
+                    BackgroundColor="LightGray"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    TextColor="LightSkyBlue"/>
+
+            <Label  
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Text="* ID"
+                    FontSize="Small"
+                    VerticalOptions="Center"
+                    TextColor="Black"/>
+
+            <local:MyEntry 
+                        Grid.Row="4"
+                        Grid.ColumnSpan="3"
+                        TextColor="Black"
+                        FontSize="Small"
+                        Text="{Binding Id}" 
+                        Keyboard="Text"
+               />
+
+            <Label  
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    Text="* Name"
+                    FontSize="Small"
+                    VerticalOptions="Center"
+                    TextColor="Black"/>
+
+            <local:MyEntry 
+                    Grid.Row="6"
+                    Grid.ColumnSpan="3"
+                    TextColor="Black"
+                    FontSize="Small"
+                    Text="{Binding Name}" 
+                    Keyboard="Text"
+               />
+
+            <Label  
+                    Grid.Row="7"
+                    Grid.Column="0"
+                    Text="* Address"
+                    FontSize="Small"
+                    VerticalOptions="Center"
+                    TextColor="Black"/>
+
+            <local:MyEntry 
+                    Grid.Row="8"
+                    Grid.ColumnSpan="3"
+                    TextColor="Black"
+                    FontSize="Small"
+                    Text="{Binding Address}" 
+                    Keyboard="Text"
+               />
+
+            <Button Grid.Row="10"
+                    Grid.ColumnSpan="3"
+                    Text="Add User" 
+                    Command="{Binding AddCommand}" 
+                    BackgroundColor="LightGreen"   
+                    HorizontalOptions = "FillAndExpand"
+                    VerticalOptions="Start"
+                    CornerRadius="10"
+                />
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

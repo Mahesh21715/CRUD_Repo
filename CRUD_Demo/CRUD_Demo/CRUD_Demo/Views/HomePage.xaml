@@ -1,17 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CRUD_Demo.Views.HomePage">
+             x:Class="CRUD_Demo.Views.HomePage" 
+             Title="CRUD Operations"
+             Padding="5"
+             >
     <ContentPage.Content>
-        <StackLayout>
-            <Button Text="Add User" Clicked="AddUser"/>
+        <ScrollView x:Name="MainScroll" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Button 
+                    Text="Add User"
+                    CornerRadius="10"
+                    Margin="5"
+                    BackgroundColor="LightGreen"
+                    TextColor="GhostWhite"
+                    Command="{Binding AddUserPageCommand}"
+                    />
 
-            <Button Text="Get User Data" Clicked="GetUser"/>
+                <Button 
+                    Text="Get User Data" 
+                    CornerRadius="10"
+                    Margin="5"
+                    TextColor="GhostWhite"
+                    BackgroundColor="SkyBlue"
+                    Command="{Binding DisplayUserPageCommand}"
+                    />
 
-            <Button Text="Edit User Data" Clicked="EditUser"/>
+                <Button 
+                    Text="Edit User Data"
+                    CornerRadius="10"
+                    Margin="5"
+                    TextColor="GhostWhite"
+                    BackgroundColor="Orange"
+                    Command="{Binding EditUserPageCommand}"
+                    />
 
-            <Button Text="Delete User Data" Clicked="DeleteUser" />
-
-        </StackLayout>
+                <Button 
+                    Text="Delete User Data" 
+                    CornerRadius="10"
+                    Margin="5"
+                    TextColor="GhostWhite"
+                    BackgroundColor="Red"
+                    Command="{Binding DeleteUserPageCommand}"
+                    />
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
