@@ -39,15 +39,14 @@
 
 
             <Label  
-                    Grid.Row="2"
+                    Grid.Row="1"
                     Grid.ColumnSpan="3"
-                    Text="User"
-                    BackgroundColor="LightGray"
+                    Text="User Data"
                     HorizontalOptions="FillAndExpand"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
                     FontSize="Large"
-                    FontAttributes="Bold"
+                    
                     TextColor="LightSkyBlue"/>
 
             <Label  
